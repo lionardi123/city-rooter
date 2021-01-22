@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="@string/home_nav_bar_title"
+        android:icon="@android:drawable/sym_def_app_icon" />
+    <item android:id="@+id/profile"
+        android:title="@string/profile_nav_bar_title"
+        android:icon="@android:drawable/sym_def_app_icon" />
+    <item android:id="@+id/call"
+        android:title="@string/call_nav_bar_title"
+        android:icon="@android:drawable/sym_def_app_icon" />
+    <item android:id="@+id/contact"
+        android:title="@string/contact_nav_bar_title"
+        android:icon="@android:drawable/sym_def_app_icon" />
+</menu>

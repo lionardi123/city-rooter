@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_navbar_height">60dp</dimen>
+    <dimen name="action_bar_logo_width">180dp</dimen>
+    <dimen name="action_bar_height">86dp</dimen>
+    <dimen name="burger_width">52dp</dimen>
+    <dimen name="burger_height">36dp</dimen>
+
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_l">16dp</dimen>
+
+    <dimen name="radius_3">3dp</dimen>
+
+    <dimen name="stroke_width_2">2dp</dimen>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CityRooter</string>
+
+    <!--CONTENT DESCRIPTION-->
+    <string name="logo">Logo</string>
+    <string name="burger">burger</string>
+
+    <!--STRINGS-->
+    <!--MAIN ACTIVITY-->
+    <string name="home_nav_bar_title">Home</string>
+    <string name="profile_nav_bar_title">Profile</string>
+    <string name="call_nav_bar_title">Call</string>
+    <string name="contact_nav_bar_title">Contact Us</string>
+
+
+</resources>
