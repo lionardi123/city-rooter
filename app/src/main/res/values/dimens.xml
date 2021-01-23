@@ -5,6 +5,8 @@
     <dimen name="action_bar_height">86dp</dimen>
     <dimen name="burger_width">52dp</dimen>
     <dimen name="burger_height">36dp</dimen>
+    <dimen name="carousel_height">180dp</dimen>
+    <dimen name="carousel_padding">20dp</dimen>
 
     <dimen name="space_s">8dp</dimen>
     <dimen name="space_l">16dp</dimen>
