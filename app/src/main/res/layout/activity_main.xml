@@ -24,8 +24,11 @@
                 layout="@layout/action_bar_layout" />
 
             <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/navHostContainer"
+                android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                app:navGraph="@navigation/rooter_nav"/>
         </LinearLayout>
     </ScrollView>
 
