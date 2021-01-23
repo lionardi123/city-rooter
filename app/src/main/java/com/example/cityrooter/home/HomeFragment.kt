@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.navGraphViewModels
+import coil.load
+import coil.size.Scale
 import com.example.cityrooter.R
 import com.example.cityrooter.databinding.HomeFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,11 +29,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         homeFragmentBinding = HomeFragmentBinding.inflate(layoutInflater)
-        homeFragmentBinding.carouselWidget.fragmentRetriever = {this}
+        initWidgets()
         return homeFragmentBinding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    private fun initWidgets(){
+        homeFragmentBinding.carouselWidget.fragmentRetriever = {this}
+        homeFragmentBinding.bannerImageView.load("https://cityrooter.id/wp-content/uploads/2020/11/layanan-pipa-mampet-palembang-1.jpg")
     }
 }
