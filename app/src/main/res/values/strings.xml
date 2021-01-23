@@ -4,6 +4,8 @@
     <!--CONTENT DESCRIPTION-->
     <string name="logo">Logo</string>
     <string name="burger">burger</string>
+    <string name="arr_left">arrLeft</string>
+    <string name="arr_right">arrRight</string>
 
     <!--STRINGS-->
     <!--MAIN ACTIVITY-->

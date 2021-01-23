@@ -1,7 +1,7 @@
 package com.example.cityrooter.profile
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject
 
-class ProfileViewModel @Inject constructor(): ViewModel() {
-}
+class ProfileViewModel @ViewModelInject constructor(): ViewModel()

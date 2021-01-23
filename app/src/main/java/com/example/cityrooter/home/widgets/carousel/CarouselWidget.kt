@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import com.example.cityrooter.core.views.CoreFrameLayout
 import com.example.cityrooter.databinding.CarouselWidgetBinding
 import com.example.cityrooter.home.widgets.carousel.adapter.CarouselAdapter
@@ -30,10 +29,14 @@ class CarouselWidget(context: Context, attributeSet: AttributeSet): CoreFrameLay
     }
 
     private fun initViewPager() {
-        adapter = CarouselAdapter(fragmentRetriever.invoke(), listOf("https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg"))
+        adapter = CarouselAdapter(fragmentRetriever.invoke(),
+            listOf("https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg",
+                "https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg",
+                "https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg"
+        ))
         binding.viewPager.adapter = adapter
-        TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-
-        }.attach()
+        TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ -> }.attach()
+        binding.btnLeft.setOnClickListener { binding.viewPager.setCurrentItem((binding.viewPager.currentItem - 1).takeIf { it >= 0 } ?: adapter.itemCount - 1) }
+        binding.btnRight.setOnClickListener { binding.viewPager.setCurrentItem((binding.viewPager.currentItem + 1).takeIf { it <= adapter.itemCount - 1 } ?: 0)  }
     }
 }

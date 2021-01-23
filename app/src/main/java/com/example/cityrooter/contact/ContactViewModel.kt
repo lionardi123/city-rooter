@@ -1,8 +1,8 @@
 package com.example.cityrooter.contact
 
+import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject
 
-class ContactViewModel @Inject constructor(): ViewModel() {
-    // TODO: Implement the ViewModel
+class ContactViewModel @ViewModelInject constructor(): ViewModel() {
 }
