@@ -7,14 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.cityrooter.R
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class ProfileFragment : Fragment() {
+@AndroidEntryPoint
+class ProfileFragment: Fragment() {
 
     companion object {
         fun newInstance() = ProfileFragment()
     }
 
-    private lateinit var viewModel: ProfileViewModel
+    @Inject lateinit var viewModel: ProfileViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

@@ -7,14 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.cityrooter.R
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class ContactFragment : Fragment() {
 
     companion object {
         fun newInstance() = ContactFragment()
     }
 
-    private lateinit var viewModel: ContactViewModel
+    @Inject lateinit var viewModel: ContactViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +29,6 @@ class ContactFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(ContactViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
 }
