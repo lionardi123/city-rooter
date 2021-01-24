@@ -89,6 +89,80 @@
         android:id="@+id/galleryWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_xl"/>
+        android:layout_marginTop="@dimen/space_xxl"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ratingWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:padding="@dimen/space_l">
+
+        <ImageView
+            android:id="@+id/imageViewStarOne"
+            android:layout_width="@dimen/star_dimen"
+            android:layout_height="@dimen/star_dimen"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintEnd_toStartOf="@+id/imageVIewStarTwo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageVIewStarTwo"
+            android:layout_width="@dimen/star_dimen"
+            android:layout_height="@dimen/star_dimen"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewStarThree"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageViewStarOne"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewStarThree"
+            android:layout_width="@dimen/star_dimen"
+            android:layout_height="@dimen/star_dimen"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewStarFour"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageVIewStarTwo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewStarFour"
+            android:layout_width="@dimen/star_dimen"
+            android:layout_height="@dimen/star_dimen"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewStarFive"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageViewStarThree"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewStarFive"
+            android:layout_width="@dimen/star_dimen"
+            android:layout_height="@dimen/star_dimen"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageViewStarFour"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSlogan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_ml"
+            android:text="@string/slogan_footer_title"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewStarThree" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
