@@ -62,7 +62,7 @@ class HomeFragment : Fragment() {
             homeFragmentBinding.carouselWidget.setData(newCarouselImages)
         }
         val observerBannerImage = Observer<String> { newBannerImage ->
-
+            homeFragmentBinding.bannerImageView.load(newBannerImage)
         }
         val observerMainInfoList = Observer<List<TitleLabelImageModel>> { newMainInfoList ->
 
