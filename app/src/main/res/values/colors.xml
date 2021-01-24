@@ -13,6 +13,9 @@
     <color name="blue_primary">#3f7ce4</color>
     <color name="primary_yellow">#fad950</color>
     <color name="secondary_yellow">#FFBF13</color>
+    <color name="blue_dark">#00228b</color>
+    <color name="blue_dark_secondary">#0c2164</color>
     <color name="blue_secondary">#1D73BE</color>
     <color name="blue_light">#2D7AEC</color>
+    <color name="green_primary">#27924F</color>
 </resources>
