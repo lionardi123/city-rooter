@@ -52,4 +52,10 @@
         android:layout_marginStart="@dimen/space_l"
         android:layout_marginEnd="@dimen/space_l"/>
 
+    <com.example.cityrooter.home.widgets.about.AboutWidget
+        android:id="@+id/aboutWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxl"/>
+
 </LinearLayout>

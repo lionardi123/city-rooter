@@ -10,6 +10,7 @@
     <color name="gray">#808080</color>
     <color name="blue_primary">#3f7ce4</color>
     <color name="primary_yellow">#fad950</color>
+    <color name="secondary_yellow">#FFBF13</color>
     <color name="blue_secondary">#1D73BE</color>
     <color name="blue_light">#2D7AEC</color>
 </resources>

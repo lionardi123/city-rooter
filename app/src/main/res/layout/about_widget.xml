@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/aboutTitleBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/aboutDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_ml"
+        android:paddingEnd="@dimen/space_ml"
+        android:textSize="14sp"
+        android:lineSpacingMultiplier="1.3"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/space_l"
+        android:ellipsize="end"/>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="@dimen/more_button_width"
+        android:layout_height="@dimen/more_button_height"
+        android:background="@drawable/bg_btn_rounded_50_yellow"
+        android:textSize="14sp"
+        android:text="@string/more"
+        android:textAllCaps="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_l"/>
+
+</LinearLayout>

@@ -7,6 +7,7 @@ import com.example.cityrooter.core.reader.JsonFileReaderService
 import com.example.cityrooter.datamodel.CustSummaryModel
 import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
+import com.example.cityrooter.home.widgets.about.AboutViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import javax.inject.Inject
 
@@ -33,8 +34,8 @@ class HomeViewModel @Inject constructor(
         MutableLiveData<String>()
     }
 
-    val aboutUs: MutableLiveData<String> by lazy {
-        MutableLiveData<String>()
+    val aboutUs: MutableLiveData<AboutViewModel> by lazy {
+        MutableLiveData<AboutViewModel>()
     }
 
     val custSummaries: MutableLiveData<List<CustSummaryModel>> by lazy {
@@ -62,7 +63,10 @@ class HomeViewModel @Inject constructor(
             it.sellingPointItems = homeResponseModel.sellingPoints
         }
         adVideo.value = homeResponseModel.adVideo
-        aboutUs.value = homeResponseModel.aboutUs
+        aboutUs.value = AboutViewModel().also {
+            it.titleBanner = homeResponseModel.aboutUsBanner
+            it.aboutDesc = homeResponseModel.aboutUs
+        }
         custSummaries.value = homeResponseModel.custSummaries
         superiorities.value = homeResponseModel.superiorities
         services.value = homeResponseModel.services
