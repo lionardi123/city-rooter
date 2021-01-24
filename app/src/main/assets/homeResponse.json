@@ -23,6 +23,7 @@
       "imageUrl": "https://cityrooter.id/wp-content/uploads/2020/11/Pembayaran-640x640-1.png"
     }
   ],
+  "sellingPointsBanner": "https://cityrooter.id/wp-content/uploads/2020/11/mengapa-memilih-city-rooter.png",
   "sellingPoints": [
     {
       "title": "PELAYANAN CEPAT",
@@ -46,7 +47,9 @@
     }
   ],
   "adVideo": "https://www.youtube.com/watch?v=FQR5UHxDLLg&feature=emb_logo",
+  "aboutUsBanner": "https://cityrooter.id/wp-content/uploads/2020/11/Tentang-City-Rooter-Palembang-2.png",
   "aboutUs": "Cityrooter.id melayani jasa pelancaran saluran mampet dengan harga murah dan kualitas kerja yang terjamin. Saluran yang mampet atau saluran pipa yang tersumbat dapat kami tuntaskan dengan peralatan mesin yang canggih dan alat kerja yang memadai, serta jauh lebih efisien sehingga menghemat banyak waktu tanpa pembongkaran pipa dan saluran.",
+  "custSummariesBanner": "https://cityrooter.id/wp-content/uploads/2020/11/pelanggan.png",
   "custSummaries": [
     {
       "category": "Commercial",
@@ -61,6 +64,7 @@
       "total": 201
     }
   ],
+  "superioritiesBanner": "https://cityrooter.id/wp-content/uploads/2020/11/keunggulan.png",
   "superiorities": [
     "Solusi Tanpa Bongkar",
     "Teknisi Ahli",
@@ -71,6 +75,7 @@
     "Fast Respon",
     "Pelayanan Terbaik"
   ],
+  "servicesBanner": "https://cityrooter.id/wp-content/uploads/2020/11/layanan.png",
   "services": [
     "Kamar Mandi",
     "Closet Duduk / Jongkok",
@@ -81,6 +86,7 @@
     "Keran Air/Toren",
     "Saluran Lainnya"
   ],
+  "galleriesBanner": "https://cityrooter.id/wp-content/uploads/2020/11/GALERI.png",
   "galleries": [
     "https://cityrooter.id/wp-content/uploads/2020/12/Saluran-Mampet-Panggilan-Sedot-WA-Perbaikan-Pipa.jpg",
     "https://cityrooter.id/wp-content/uploads/2020/12/Perbaikan-Pipa-WC-Toilet-Kamar-Mandi-Mampet-Tersumbat-Palembang.jpg",
