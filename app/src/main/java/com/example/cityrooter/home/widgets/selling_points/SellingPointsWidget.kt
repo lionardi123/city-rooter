@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.GridLayout
+import coil.load
 import com.example.cityrooter.core.views.CoreFrameLayout
 import com.example.cityrooter.databinding.SellingPointsWidgetBinding
 import com.example.cityrooter.datamodel.TitleLabelImageModel
@@ -28,6 +29,7 @@ class SellingPointsWidget(context: Context, attributeSet: AttributeSet) :
     }
 
     private fun bindDataToView(){
+        binding.sellingTitleBanner.load(viewModel.banner)
         viewModel.sellingPointItems.forEach {
             val view = createSellingItemCard(it)
             binding.sellingGridLayout.addView(view)
