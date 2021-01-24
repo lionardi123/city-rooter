@@ -13,30 +13,43 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class CarouselWidget(context: Context, attributeSet: AttributeSet): CoreFrameLayout(context, attributeSet) {
+class CarouselWidget(context: Context, attributeSet: AttributeSet) :
+    CoreFrameLayout(context, attributeSet) {
 
-    @Inject lateinit var viewModel: CarouselViewModel
     private lateinit var binding: CarouselWidgetBinding
 
     private lateinit var adapter: CarouselAdapter
 
-    lateinit var fragmentRetriever: (() -> Fragment)
+    var fragment: Fragment? = null
+        set(value) {
+            field = value
+            if(value != null) initViewPager(value)
+        }
 
     override fun onCreateView(): View {
         binding = CarouselWidgetBinding.inflate(LayoutInflater.from(context), this, true)
-        initViewPager()
         return binding.root
     }
 
-    private fun initViewPager() {
-        adapter = CarouselAdapter(fragmentRetriever.invoke(),
-            listOf("https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg",
-                "https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg",
-                "https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg"
-        ))
+    private fun initViewPager(fragment: Fragment) {
+        adapter = CarouselAdapter(
+            fragment,
+            listOf()
+        )
         binding.viewPager.adapter = adapter
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { _, _ -> }.attach()
-        binding.btnLeft.setOnClickListener { binding.viewPager.setCurrentItem((binding.viewPager.currentItem - 1).takeIf { it >= 0 } ?: adapter.itemCount - 1) }
-        binding.btnRight.setOnClickListener { binding.viewPager.setCurrentItem((binding.viewPager.currentItem + 1).takeIf { it <= adapter.itemCount - 1 } ?: 0)  }
+        binding.btnLeft.setOnClickListener {
+            binding.viewPager.setCurrentItem((binding.viewPager.currentItem - 1).takeIf { it >= 0 }
+                ?: adapter.itemCount - 1)
+        }
+        binding.btnRight.setOnClickListener {
+            binding.viewPager.setCurrentItem((binding.viewPager.currentItem + 1).takeIf { it <= adapter.itemCount - 1 }
+                ?: 0)
+        }
+    }
+
+    fun setData(imageItemList: List<String>) {
+        adapter.data = imageItemList
+        adapter.notifyDataSetChanged()
     }
 }

@@ -9,7 +9,8 @@ import com.example.cityrooter.home.widgets.carousel.fragment.CarouselItemDataMod
 import com.example.cityrooter.home.widgets.carousel.fragment.CarouselItemFragment
 
 class CarouselAdapter(fragment: Fragment,
-                      val data: List<String>): FragmentStateAdapter(fragment) {
+                      var data: List<String>): FragmentStateAdapter(fragment) {
+
 
     override fun getItemCount(): Int {
         return data.size

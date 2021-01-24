@@ -13,6 +13,7 @@ class CarouselItemViewModel @ViewModelInject constructor(): ViewModel() {
     }
 
     internal fun setData(data: CarouselItemDataModel?){
-        imageUrl.value = "https://cityrooter.id/wp-content/uploads/2020/11/toilet-mampet.jpg"
+        if(data == null) return
+        imageUrl.value = data.imageUrl
     }
 }

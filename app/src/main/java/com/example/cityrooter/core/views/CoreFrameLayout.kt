@@ -7,8 +7,7 @@ import android.widget.FrameLayout
 
 abstract class CoreFrameLayout(context: Context, attributeSet: AttributeSet): FrameLayout(context, attributeSet) {
 
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
+    init {
         onCreateView()
     }
 
