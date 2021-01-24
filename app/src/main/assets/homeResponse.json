@@ -53,15 +53,18 @@
   "custSummaries": [
     {
       "category": "Commercial",
-      "total": 301
+      "total": 301,
+      "threshold": 300
     },
     {
       "category": "Residential",
-      "total": 301
+      "total": 301,
+      "threshold": 300
     },
     {
       "category": "Other",
-      "total": 201
+      "total": 201,
+      "threshold": 200
     }
   ],
   "superioritiesBanner": "https://cityrooter.id/wp-content/uploads/2020/11/keunggulan.png",

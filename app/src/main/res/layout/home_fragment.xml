@@ -58,4 +58,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_xxl"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_secondary"
+        android:layout_marginTop="@dimen/space_xxl"
+        android:padding="@dimen/space_ml"
+        android:orientation="vertical">
+
+        <com.example.cityrooter.home.widgets.customer.CustomerSummaryWidget
+            android:id="@+id/custSummaryWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
 </LinearLayout>

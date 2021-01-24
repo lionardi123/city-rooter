@@ -19,6 +19,7 @@
     <dimen name="more_button_height">36dp</dimen>
 
     <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">12dp</dimen>
     <dimen name="space_l">16dp</dimen>
     <dimen name="space_xl">24dp</dimen>
     <dimen name="space_ml">18dp</dimen>

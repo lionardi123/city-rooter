@@ -18,6 +18,7 @@ import com.example.cityrooter.datamodel.CustSummaryModel
 import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
+import com.example.cityrooter.home.widgets.customer.CustomerSummaryViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -78,8 +79,8 @@ class HomeFragment : Fragment() {
         val observerAboutUs = Observer<AboutViewModel> { newAboutUs ->
             homeFragmentBinding.aboutWidget.setData(newAboutUs)
         }
-        val observerCustSummaries = Observer<List<CustSummaryModel>> { newCustSummaries ->
-
+        val observerCustSummaries = Observer<CustomerSummaryViewModel> { newCustSummaries ->
+            homeFragmentBinding.custSummaryWidget.setData(newCustSummaries)
         }
         val observerSuperiorities = Observer<List<String>> { newSuperiorities ->
 

@@ -8,6 +8,7 @@ import com.example.cityrooter.datamodel.CustSummaryModel
 import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
+import com.example.cityrooter.home.widgets.customer.CustomerSummaryViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import javax.inject.Inject
 
@@ -38,8 +39,8 @@ class HomeViewModel @Inject constructor(
         MutableLiveData<AboutViewModel>()
     }
 
-    val custSummaries: MutableLiveData<List<CustSummaryModel>> by lazy {
-        MutableLiveData<List<CustSummaryModel>>()
+    val custSummaries: MutableLiveData<CustomerSummaryViewModel> by lazy {
+        MutableLiveData<CustomerSummaryViewModel>()
     }
 
     val superiorities: MutableLiveData<List<String>> by lazy {
@@ -67,7 +68,10 @@ class HomeViewModel @Inject constructor(
             it.titleBanner = homeResponseModel.aboutUsBanner
             it.aboutDesc = homeResponseModel.aboutUs
         }
-        custSummaries.value = homeResponseModel.custSummaries
+        custSummaries.value = CustomerSummaryViewModel().also {
+            it.titleBanner = homeResponseModel.custSummariesBanner
+            it.customerSummaryList = homeResponseModel.custSummaries
+        }
         superiorities.value = homeResponseModel.superiorities
         services.value = homeResponseModel.services
         galleries.value = homeResponseModel.galleries
