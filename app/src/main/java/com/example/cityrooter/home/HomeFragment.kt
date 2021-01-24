@@ -17,6 +17,7 @@ import com.example.cityrooter.databinding.HomeFragmentBinding
 import com.example.cityrooter.datamodel.CustSummaryModel
 import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
+import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -67,8 +68,8 @@ class HomeFragment : Fragment() {
         val observerMainInfoList = Observer<List<TitleLabelImageModel>> { newMainInfoList ->
             homeFragmentBinding.basicInfoWidget.setData(newMainInfoList)
         }
-        val observerSellingPoints = Observer<List<TitleLabelImageModel>> { newSellingPoints ->
-
+        val observerSellingPoints = Observer<SellingPointsViewModel> { newSellingPoints ->
+            homeFragmentBinding.sellingPointsWidget.setData(newSellingPoints)
         }
         val observerAdVideo = Observer<String> { newAdVideo ->
 

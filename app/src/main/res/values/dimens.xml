@@ -10,10 +10,15 @@
     <dimen name="carousel_arrow_dimen">40dp</dimen>
     <dimen name="home_banner_height">42dp</dimen>
     <dimen name="basic_info_dimension">42dp</dimen>
+    <dimen name="selling_points_card_height">480dp</dimen>
+    <dimen name="selling_points_image_height">98dp</dimen>
+    <dimen name="selling_points_separator_width">72dp</dimen>
+    <dimen name="selling_points_separator_height">3dp</dimen>
 
     <dimen name="space_s">8dp</dimen>
     <dimen name="space_l">16dp</dimen>
     <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_ml">18dp</dimen>
 
     <dimen name="radius_3">3dp</dimen>
     <dimen name="radius_10">10dp</dimen>

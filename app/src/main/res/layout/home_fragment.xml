@@ -36,7 +36,12 @@
         android:id="@+id/basicInfoWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_xl"
-        />
+        android:layout_marginTop="@dimen/space_xl" />
+
+    <com.example.cityrooter.home.widgets.selling_points.SellingPointsWidget
+        android:id="@+id/sellingPointsWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xl"/>
 
 </LinearLayout>
