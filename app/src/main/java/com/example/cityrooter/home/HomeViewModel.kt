@@ -10,6 +10,7 @@ import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
 import com.example.cityrooter.home.widgets.customer.CustomerSummaryViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
+import com.example.cityrooter.home.widgets.unordered_list.UnOrderedListViewModel
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
@@ -43,12 +44,12 @@ class HomeViewModel @Inject constructor(
         MutableLiveData<CustomerSummaryViewModel>()
     }
 
-    val superiorities: MutableLiveData<List<String>> by lazy {
-        MutableLiveData<List<String>>()
+    val superiorities: MutableLiveData<UnOrderedListViewModel> by lazy {
+        MutableLiveData<UnOrderedListViewModel>()
     }
 
-    val services: MutableLiveData<List<String>> by lazy {
-        MutableLiveData<List<String>>()
+    val services: MutableLiveData<UnOrderedListViewModel> by lazy {
+        MutableLiveData<UnOrderedListViewModel>()
     }
 
     val galleries: MutableLiveData<List<String>> by lazy {
@@ -72,8 +73,14 @@ class HomeViewModel @Inject constructor(
             it.titleBanner = homeResponseModel.custSummariesBanner
             it.customerSummaryList = homeResponseModel.custSummaries
         }
-        superiorities.value = homeResponseModel.superiorities
-        services.value = homeResponseModel.services
+        superiorities.value = UnOrderedListViewModel().also {
+            it.titleBanner = homeResponseModel.superioritiesBanner
+            it.itemList = homeResponseModel.superiorities
+        }
+        services.value = UnOrderedListViewModel().also {
+            it.titleBanner = homeResponseModel.servicesBanner
+            it.itemList = homeResponseModel.services
+        }
         galleries.value = homeResponseModel.galleries
     }
 }

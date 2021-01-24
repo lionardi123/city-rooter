@@ -22,6 +22,7 @@
     <dimen name="space_m">12dp</dimen>
     <dimen name="space_l">16dp</dimen>
     <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_xls">32dp</dimen>
     <dimen name="space_ml">18dp</dimen>
     <dimen name="space_xxl">42dp</dimen>
 

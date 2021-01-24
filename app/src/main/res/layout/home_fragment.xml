@@ -71,6 +71,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <com.example.cityrooter.home.widgets.unordered_list.UnOrderedListWidget
+            android:id="@+id/superioritiesWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"/>
+
+        <com.example.cityrooter.home.widgets.unordered_list.UnOrderedListWidget
+            android:id="@+id/servicesWidget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"/>
+
     </LinearLayout>
 
 </LinearLayout>

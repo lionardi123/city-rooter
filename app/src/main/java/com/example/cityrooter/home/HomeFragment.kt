@@ -20,6 +20,7 @@ import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
 import com.example.cityrooter.home.widgets.customer.CustomerSummaryViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
+import com.example.cityrooter.home.widgets.unordered_list.UnOrderedListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -82,11 +83,11 @@ class HomeFragment : Fragment() {
         val observerCustSummaries = Observer<CustomerSummaryViewModel> { newCustSummaries ->
             homeFragmentBinding.custSummaryWidget.setData(newCustSummaries)
         }
-        val observerSuperiorities = Observer<List<String>> { newSuperiorities ->
-
+        val observerSuperiorities = Observer<UnOrderedListViewModel> { newSuperiorities ->
+            homeFragmentBinding.superioritiesWidget.setData(newSuperiorities)
         }
-        val observerServices = Observer<List<String>> { newServices ->
-
+        val observerServices = Observer<UnOrderedListViewModel> { newServices ->
+            homeFragmentBinding.servicesWidget.setData(newServices)
         }
         val observerGalleries = Observer<List<String>> { newGalleries ->
 
