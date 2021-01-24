@@ -9,6 +9,7 @@ import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
 import com.example.cityrooter.home.widgets.customer.CustomerSummaryViewModel
+import com.example.cityrooter.home.widgets.gallery.GalleryViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import com.example.cityrooter.home.widgets.unordered_list.UnOrderedListViewModel
 import javax.inject.Inject
@@ -52,8 +53,8 @@ class HomeViewModel @Inject constructor(
         MutableLiveData<UnOrderedListViewModel>()
     }
 
-    val galleries: MutableLiveData<List<String>> by lazy {
-        MutableLiveData<List<String>>()
+    val galleries: MutableLiveData<GalleryViewModel> by lazy {
+        MutableLiveData<GalleryViewModel>()
     }
 
     fun setData(homeResponseModel: HomeResponseModel){
@@ -81,6 +82,9 @@ class HomeViewModel @Inject constructor(
             it.titleBanner = homeResponseModel.servicesBanner
             it.itemList = homeResponseModel.services
         }
-        galleries.value = homeResponseModel.galleries
+        galleries.value = GalleryViewModel().also {
+            it.titleBanner = homeResponseModel.galleriesBanner
+            it.galleryItems = homeResponseModel.galleries
+        }
     }
 }

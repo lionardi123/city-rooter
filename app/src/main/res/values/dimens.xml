@@ -17,6 +17,7 @@
     <dimen name="video_player_height">172dp</dimen>
     <dimen name="more_button_width">154dp</dimen>
     <dimen name="more_button_height">36dp</dimen>
+    <dimen name="gallery_dimen">164dp</dimen>
 
     <dimen name="space_s">8dp</dimen>
     <dimen name="space_m">12dp</dimen>

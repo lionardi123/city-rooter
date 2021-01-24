@@ -19,6 +19,7 @@ import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
 import com.example.cityrooter.home.widgets.customer.CustomerSummaryViewModel
+import com.example.cityrooter.home.widgets.gallery.GalleryViewModel
 import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import com.example.cityrooter.home.widgets.unordered_list.UnOrderedListViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -89,8 +90,8 @@ class HomeFragment : Fragment() {
         val observerServices = Observer<UnOrderedListViewModel> { newServices ->
             homeFragmentBinding.servicesWidget.setData(newServices)
         }
-        val observerGalleries = Observer<List<String>> { newGalleries ->
-
+        val observerGalleries = Observer<GalleryViewModel> { newGalleries ->
+            homeFragmentBinding.galleryWidget.setData(newGalleries)
         }
         viewModel.headerImageList.observe(viewLifecycleOwner, observerCarousel)
         viewModel.bannerImage.observe(viewLifecycleOwner, observerBannerImage)
