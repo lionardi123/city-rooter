@@ -2,6 +2,7 @@ package com.example.cityrooter.home
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,15 +13,14 @@ import coil.load
 import coil.size.Scale
 import com.example.cityrooter.R
 import com.example.cityrooter.databinding.HomeFragmentBinding
+import com.example.cityrooter.datamodel.HomeResponseModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-    private val viewModel: HomeViewModel by navGraphViewModels(R.id.navHostContainer) {
-        defaultViewModelProviderFactory
-    }
+    @Inject lateinit var viewModel: HomeViewModel
 
     private lateinit var homeFragmentBinding: HomeFragmentBinding
 
@@ -30,11 +30,31 @@ class HomeFragment : Fragment() {
     ): View {
         homeFragmentBinding = HomeFragmentBinding.inflate(layoutInflater)
         initWidgets()
+        observeData()
+        loadData()
         return homeFragmentBinding.root
+    }
+
+    private fun loadData(){
+        val immutableContext = context
+        if(immutableContext != null){
+            val data = viewModel.jsonFileReaderService.getJsonFromAssets(
+                immutableContext,
+                "homeResponse.json",
+                HomeResponseModel::class
+            )
+            if(data != null)
+            viewModel.setData(
+                data
+            )
+        }
+    }
+
+    private fun observeData() {
+
     }
 
     private fun initWidgets(){
         homeFragmentBinding.carouselWidget.fragmentRetriever = {this}
-        homeFragmentBinding.bannerImageView.load("https://cityrooter.id/wp-content/uploads/2020/11/layanan-pipa-mampet-palembang-1.jpg")
     }
 }
