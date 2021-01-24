@@ -1,8 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/imageViewFirst"
+        android:layout_width="@dimen/basic_info_dimension"
+        android:layout_height="@dimen/basic_info_dimension"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleFirst"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleFirst"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewDescFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:padding="20dp"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDescSecond"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleFirst" />
+
+    <TextView
+        android:id="@+id/textViewDescSecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:padding="20dp"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDescThird"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewDescFirst"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleSecond" />
+
+    <TextView
+        android:id="@+id/textViewDescThird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_s"
+        android:padding="20dp"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewDescSecond"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleThird" />
+
+    <TextView
+        android:id="@+id/textViewTitleFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/blue_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescFirst"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescFirst"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFirst" />
+
+    <TextView
+        android:id="@+id/textViewTitleSecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/blue_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDescSecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescSecond"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSecond" />
+
+    <TextView
+        android:id="@+id/textViewTitleThird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_l"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/blue_secondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescThird"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewThird" />
+
+    <ImageView
+        android:id="@+id/imageViewSecond"
+        android:layout_width="@dimen/basic_info_dimension"
+        android:layout_height="@dimen/basic_info_dimension"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleSecond"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleSecond"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageViewThird"
+        android:layout_width="@dimen/basic_info_dimension"
+        android:layout_height="@dimen/basic_info_dimension"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTitleThird"
+        app:layout_constraintStart_toStartOf="@+id/textViewTitleThird"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,6 +32,11 @@
 
     </androidx.cardview.widget.CardView>
 
-
+    <com.example.cityrooter.home.widgets.basic.BasicInfoWidget
+        android:id="@+id/basicInfoWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xl"
+        />
 
 </LinearLayout>

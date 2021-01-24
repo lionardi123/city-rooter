@@ -65,7 +65,7 @@ class HomeFragment : Fragment() {
             homeFragmentBinding.bannerImageView.load(newBannerImage)
         }
         val observerMainInfoList = Observer<List<TitleLabelImageModel>> { newMainInfoList ->
-
+            homeFragmentBinding.basicInfoWidget.setData(newMainInfoList)
         }
         val observerSellingPoints = Observer<List<TitleLabelImageModel>> { newSellingPoints ->
 
