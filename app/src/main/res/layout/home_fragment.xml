@@ -224,20 +224,143 @@
 
     </FrameLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="700dp"
         android:background="@color/blue_dark"
+        android:orientation="vertical"
         android:padding="@dimen/space_xl">
-        
+
         <ImageView
+            android:id="@+id/imageViewLogo"
             android:layout_width="@dimen/logo_footer_width"
             android:layout_height="@dimen/logo_footer_height"
-            android:src="@mipmap/city_rooter_white"
+            android:layout_gravity="center"
             android:layout_marginTop="@dimen/space_l"
-            android:layout_gravity="center"/>
+            android:src="@mipmap/city_rooter_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imageViewLocation"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewLocation"
+            app:srcCompat="@drawable/tab_layout_selected" />
+
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/space_xxl"
+            app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+
+        <ImageView
+            android:id="@+id/imageViewPhone"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewPhone"
+            app:srcCompat="@drawable/tab_layout_selected" />
+
+        <ImageView
+            android:id="@+id/imageViewEmail"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewEmail"
+            app:srcCompat="@drawable/tab_layout_selected" />
+
+        <TextView
+            android:id="@+id/textViewPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            android:layout_marginTop="@dimen/space_m"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            android:layout_marginTop="@dimen/space_m"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPhone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/socialMediaLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xls"
+            android:background="@drawable/bg_border_white"
+            android:padding="@dimen/space_m"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/igBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/btn_padding"
+                android:text="@string/ig_btn_label"
+                android:textColor="@color/blue_dark_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/facebookImageView"
+                android:layout_width="@dimen/basic_info_dimension"
+                android:layout_height="@dimen/basic_info_dimension"
+                android:layout_marginTop="@dimen/space_xl"
+                android:background="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/instagramImageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/igBtn" />
+
+            <ImageView
+                android:id="@+id/instagramImageView"
+                android:layout_width="@dimen/basic_info_dimension"
+                android:layout_height="@dimen/basic_info_dimension"
+                android:layout_marginTop="@dimen/space_xl"
+                android:background="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/youtubeImageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/facebookImageView"
+                app:layout_constraintTop_toBottomOf="@+id/igBtn" />
+
+            <ImageView
+                android:id="@+id/youtubeImageView"
+                android:layout_width="@dimen/basic_info_dimension"
+                android:layout_height="@dimen/basic_info_dimension"
+                android:layout_marginTop="@dimen/space_xl"
+                android:layout_marginBottom="@dimen/space_xl"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/instagramImageView"
+                app:layout_constraintTop_toBottomOf="@+id/igBtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

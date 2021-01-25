@@ -57,6 +57,18 @@ class HomeViewModel @Inject constructor(
         MutableLiveData<GalleryViewModel>()
     }
 
+    val address: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
+
+    val phone: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
+
+    val email: MutableLiveData<String> by lazy {
+        MutableLiveData<String>()
+    }
+
     fun setData(homeResponseModel: HomeResponseModel){
         headerImageList.value = homeResponseModel.headerImageList
         bannerImage.value = homeResponseModel.bannerImage
@@ -86,5 +98,8 @@ class HomeViewModel @Inject constructor(
             it.titleBanner = homeResponseModel.galleriesBanner
             it.galleryItems = homeResponseModel.galleries
         }
+        address.value = homeResponseModel.address
+        phone.value = homeResponseModel.phone
+        email.value = homeResponseModel.email
     }
 }

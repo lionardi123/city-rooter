@@ -19,5 +19,6 @@
     <string name="question_title">Ada Pertanyaan?</string>
     <string name="question_desc">Silahkan Booking dan Konsultasi Sekarang Juga!</string>
     <string name="whatsapp_btn_label">WhatsApp</string>
+    <string name="ig_btn_label">Follow @cityrooter.id</string>
 
 </resources>

@@ -16,5 +16,8 @@ data class HomeResponseModel(
     val servicesBanner: String,
     val services: List<String>,
     val galleriesBanner: String,
-    val galleries: List<String>
+    val galleries: List<String>,
+    val address: String,
+    val phone: String,
+    val email: String
 )

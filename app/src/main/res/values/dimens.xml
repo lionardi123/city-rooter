@@ -23,6 +23,9 @@
     <dimen name="home_footer_height">370dp</dimen>
     <dimen name="logo_footer_width">168dp</dimen>
     <dimen name="logo_footer_height">54dp</dimen>
+    <dimen name="btn_padding">20dp</dimen>
+
+    <dimen name="small_icon">12dp</dimen>
 
     <dimen name="space_s">8dp</dimen>
     <dimen name="space_m">12dp</dimen>

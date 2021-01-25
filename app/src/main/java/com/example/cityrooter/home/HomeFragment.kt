@@ -93,6 +93,16 @@ class HomeFragment : Fragment() {
         val observerGalleries = Observer<GalleryViewModel> { newGalleries ->
             homeFragmentBinding.galleryWidget.setData(newGalleries)
         }
+        val observerAddress = Observer<String> { address ->
+            homeFragmentBinding.textViewLocation.text = address
+        }
+        val observerPhone = Observer<String> { phone ->
+            homeFragmentBinding.textViewPhone.text = phone
+        }
+        val observerEmail = Observer<String> { email ->
+            homeFragmentBinding.textViewEmail.text = email
+        }
+
         viewModel.headerImageList.observe(viewLifecycleOwner, observerCarousel)
         viewModel.bannerImage.observe(viewLifecycleOwner, observerBannerImage)
         viewModel.mainInfoList.observe(viewLifecycleOwner, observerMainInfoList)
@@ -103,6 +113,9 @@ class HomeFragment : Fragment() {
         viewModel.superiorities.observe(viewLifecycleOwner, observerSuperiorities)
         viewModel.services.observe(viewLifecycleOwner, observerServices)
         viewModel.galleries.observe(viewLifecycleOwner, observerGalleries)
+        viewModel.address.observe(viewLifecycleOwner, observerAddress)
+        viewModel.phone.observe(viewLifecycleOwner, observerPhone)
+        viewModel.email.observe(viewLifecycleOwner, observerEmail)
     }
 
     private fun initWidgets(){
