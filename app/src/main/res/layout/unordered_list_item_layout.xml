@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:textSize="16sp"
     android:textColor="@color/black"
-    app:drawableStartCompat="@android:drawable/btn_star"
+    app:drawableStartCompat="@drawable/ic_check"
     android:drawablePadding="@dimen/space_s"
     tools:text="Kamar Mandi"
     android:textStyle="bold"

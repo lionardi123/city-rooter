@@ -102,18 +102,19 @@
             android:id="@+id/imageViewStarOne"
             android:layout_width="@dimen/star_dimen"
             android:layout_height="@dimen/star_dimen"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_star"
             app:layout_constraintEnd_toStartOf="@+id/imageVIewStarTwo"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_star" />
 
         <ImageView
             android:id="@+id/imageVIewStarTwo"
             android:layout_width="@dimen/star_dimen"
             android:layout_height="@dimen/star_dimen"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_star"
             app:layout_constraintEnd_toStartOf="@+id/imageViewStarThree"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewStarOne"
@@ -123,7 +124,7 @@
             android:id="@+id/imageViewStarThree"
             android:layout_width="@dimen/star_dimen"
             android:layout_height="@dimen/star_dimen"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_star"
             app:layout_constraintEnd_toStartOf="@+id/imageViewStarFour"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageVIewStarTwo"
@@ -133,7 +134,7 @@
             android:id="@+id/imageViewStarFour"
             android:layout_width="@dimen/star_dimen"
             android:layout_height="@dimen/star_dimen"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_star"
             app:layout_constraintEnd_toStartOf="@+id/imageViewStarFive"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewStarThree"
@@ -143,7 +144,7 @@
             android:id="@+id/imageViewStarFive"
             android:layout_width="@dimen/star_dimen"
             android:layout_height="@dimen/star_dimen"
-            android:src="@android:drawable/btn_star_big_on"
+            android:src="@drawable/ic_star"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageViewStarFour"
@@ -208,6 +209,7 @@
                 android:textSize="20sp"/>
             
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/whatsappBtn"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_large_height"
                 android:background="@drawable/bg_rounded_6_green"
@@ -248,7 +250,7 @@
             android:layout_height="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewLocation"
-            app:srcCompat="@drawable/tab_layout_selected" />
+            app:srcCompat="@drawable/ic_location" />
 
         <TextView
             android:id="@+id/textViewLocation"
@@ -267,7 +269,7 @@
             android:layout_height="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewPhone"
-            app:srcCompat="@drawable/tab_layout_selected" />
+            app:srcCompat="@drawable/ic_whatsapp" />
 
         <ImageView
             android:id="@+id/imageViewEmail"
@@ -275,7 +277,7 @@
             android:layout_height="16dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewEmail"
-            app:srcCompat="@drawable/tab_layout_selected" />
+            app:srcCompat="@drawable/ic_mail" />
 
         <TextView
             android:id="@+id/textViewPhone"
@@ -329,23 +331,23 @@
                 android:layout_width="@dimen/basic_info_dimension"
                 android:layout_height="@dimen/basic_info_dimension"
                 android:layout_marginTop="@dimen/space_xl"
-                android:background="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/instagramImageView"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/igBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/igBtn"
+                app:srcCompat="@drawable/ic_icons8_facebook_circled" />
 
             <ImageView
                 android:id="@+id/instagramImageView"
                 android:layout_width="@dimen/basic_info_dimension"
                 android:layout_height="@dimen/basic_info_dimension"
                 android:layout_marginTop="@dimen/space_xl"
-                android:background="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/youtubeImageView"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/facebookImageView"
-                app:layout_constraintTop_toBottomOf="@+id/igBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/igBtn"
+                app:srcCompat="@drawable/ic_icons8_instagram" />
 
             <ImageView
                 android:id="@+id/youtubeImageView"
@@ -353,12 +355,12 @@
                 android:layout_height="@dimen/basic_info_dimension"
                 android:layout_marginTop="@dimen/space_xl"
                 android:layout_marginBottom="@dimen/space_xl"
-                android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/instagramImageView"
-                app:layout_constraintTop_toBottomOf="@+id/igBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/igBtn"
+                app:srcCompat="@drawable/ic_icons8_play_button" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
