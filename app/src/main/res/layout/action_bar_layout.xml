@@ -4,29 +4,5 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/action_bar_height">
 
-    <ImageView
-        android:layout_width="@dimen/action_bar_logo_width"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/space_l"
-        android:layout_marginTop="@dimen/space_s"
-        android:layout_marginBottom="@dimen/space_s"
-        android:contentDescription="@string/logo"
-        android:src="@mipmap/ic_banner_foreground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"/>
-        
-    <ImageButton
-        android:id="@+id/burgerBtn"
-        android:layout_width="@dimen/burger_width"
-        android:layout_height="@dimen/burger_height"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/space_l"
-        android:background="@drawable/bg_rounded_3_black"
-        android:src="@drawable/ic_menu"
-        android:contentDescription="@string/burger"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

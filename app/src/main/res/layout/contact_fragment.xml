@@ -1,13 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".contact.ContactFragment">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Contact" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".contact.ContactFragment">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_secondary"
+            android:orientation="vertical"
+            android:padding="@dimen/space_ml">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_secondary"
+                android:padding="@dimen/space_xl">
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="@dimen/logo_footer_width"
+                    android:layout_height="@dimen/logo_footer_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_l"
+                    android:src="@mipmap/city_rooter_white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewLocation"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewLocation"
+                    app:srcCompat="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/textViewLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:layout_marginTop="@dimen/space_xxl"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+
+                <ImageView
+                    android:id="@+id/imageViewPhone"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewPhone"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+
+                <ImageView
+                    android:id="@+id/imageViewEmail"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewEmail"
+                    app:srcCompat="@drawable/ic_mail" />
+
+                <TextView
+                    android:id="@+id/textViewPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+                <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_s"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewPhone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/space_ml">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_ml"
+                    android:text="@string/contact_us_label"
+                    android:textColor="@color/black"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_ml"
+                    android:text="@string/contact_us_desc"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_ml"
+                    android:text="@string/message_label"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:background="@color/gray_secondary"
+                    android:gravity="top"
+                    android:hint="@string/message_placeholder"
+                    android:padding="@dimen/space_ml"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_ml"
+                    android:background="@drawable/bg_rounded_10_blue_second"
+                    android:paddingStart="@dimen/space_l"
+                    android:paddingTop="@dimen/space_s"
+                    android:paddingEnd="@dimen/space_l"
+                    android:paddingBottom="@dimen/space_s"
+                    android:text="@string/message_cta"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

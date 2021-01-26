@@ -29,6 +29,5 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         val navController = findNavController(R.id.navHostContainer)
         activityMainBinding.bottomNavbar.setupWithNavController(navController)
-
     }
 }

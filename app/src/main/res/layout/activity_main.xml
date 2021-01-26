@@ -19,9 +19,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include
-                android:id="@+id/action_bar_layout"
-                layout="@layout/action_bar_layout" />
+            <ImageView
+                android:layout_width="@dimen/action_bar_logo_width"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/ic_banner_foreground"
+                android:scaleType="centerCrop"/>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/navHostContainer"

@@ -21,4 +21,9 @@
     <string name="whatsapp_btn_label">WhatsApp</string>
     <string name="ig_btn_label">Follow @cityrooter.id</string>
     <string name="copyright">Copyright &#169; 2020 CityRooter.id  | Solusi Pipa Mampet Palembang</string>
+    <string name="contact_us_label">Hubungi Kami</string>
+    <string name="contact_us_desc">Kirimkan Informasi atau Penawaran yang Anda Butuhkan</string>
+    <string name="message_label">Pesan *</string>
+    <string name="message_placeholder">Masukkan Pesan</string>
+    <string name="message_cta">Mengirim Pesan</string>
 </resources>

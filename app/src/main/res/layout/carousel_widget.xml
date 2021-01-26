@@ -13,22 +13,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btnLeft"
         android:layout_width="@dimen/carousel_arrow_dimen"
         android:layout_height="@dimen/carousel_arrow_dimen"
-        android:src="@color/black"
+        app:srcCompat="@drawable/ic_left"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/viewPager"
         android:layout_marginStart="@dimen/space_l"
         android:contentDescription="@string/arr_left" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btnRight"
         android:layout_width="@dimen/carousel_arrow_dimen"
         android:layout_height="@dimen/carousel_arrow_dimen"
-        android:src="@color/black"
+        app:srcCompat="@drawable/ic_right"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/viewPager"
         app:layout_constraintEnd_toEndOf="parent"

@@ -20,6 +20,7 @@
     <dimen name="gallery_dimen">164dp</dimen>
     <dimen name="star_dimen">20dp</dimen>
     <dimen name="btn_large_height">72dp</dimen>
+    <dimen name="btn_small_height">42dp</dimen>
     <dimen name="home_footer_height">370dp</dimen>
     <dimen name="logo_footer_width">168dp</dimen>
     <dimen name="logo_footer_height">54dp</dimen>

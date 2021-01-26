@@ -1,20 +1,13 @@
 package com.example.cityrooter.home
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.navGraphViewModels
 import coil.load
-import coil.size.Scale
-import com.example.cityrooter.R
 import com.example.cityrooter.databinding.HomeFragmentBinding
-import com.example.cityrooter.datamodel.CustSummaryModel
 import com.example.cityrooter.datamodel.HomeResponseModel
 import com.example.cityrooter.datamodel.TitleLabelImageModel
 import com.example.cityrooter.home.widgets.about.AboutViewModel
@@ -24,6 +17,7 @@ import com.example.cityrooter.home.widgets.selling_points.SellingPointsViewModel
 import com.example.cityrooter.home.widgets.unordered_list.UnOrderedListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
