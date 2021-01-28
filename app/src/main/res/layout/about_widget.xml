@@ -26,6 +26,7 @@
         android:ellipsize="end"/>
     
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/aboutBtn"
         android:layout_width="@dimen/more_button_width"
         android:layout_height="@dimen/more_button_height"
         android:background="@drawable/bg_btn_rounded_50_yellow"

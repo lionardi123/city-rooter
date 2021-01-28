@@ -1,5 +1,8 @@
 package com.example.cityrooter.home
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,21 +27,83 @@ class HomeFragment : Fragment() {
 
     @Inject lateinit var viewModel: HomeViewModel
 
-    private lateinit var homeFragmentBinding: HomeFragmentBinding
+    private lateinit var binding: HomeFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        homeFragmentBinding = HomeFragmentBinding.inflate(layoutInflater)
+        binding = HomeFragmentBinding.inflate(layoutInflater)
         initWidgets()
-        return homeFragmentBinding.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observeData()
         loadData()
+    }
+
+    private fun setListeners(){
+        binding.whatsappBtn.setOnClickListener {
+
+        }
+
+        binding.igBtn.setOnClickListener {
+            openInstagram()
+        }
+
+        binding.facebookImageView.setOnClickListener {
+            openFacebook()
+        }
+
+        binding.instagramImageView.setOnClickListener {
+            openInstagram()
+        }
+
+        binding.youtubeImageView.setOnClickListener {
+            openYoutube()
+        }
+    }
+
+    fun openFacebook() {
+        try {
+            context?.packageManager?.getPackageInfo("com.facebook.katana", 0)
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/cityrooter.id")))
+        } catch (e: Exception) {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/cityrooter.id")))
+        }
+    }
+
+    private fun openYoutube() {
+        val appIntent = Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:ih2qSy6mrik"))
+        val webIntent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("http://www.youtube.com/watch?v=ih2qSy6mrik")
+        )
+        try {
+            startActivity(appIntent)
+        } catch (ex: ActivityNotFoundException) {
+            startActivity(webIntent)
+        }
+    }
+
+    private fun openInstagram(){
+        val uri = Uri.parse("http://instagram.com/_u/cityrooter.id")
+        val likeIng = Intent(Intent.ACTION_VIEW, uri)
+
+        likeIng.setPackage("com.instagram.android")
+
+        try {
+            startActivity(likeIng)
+        } catch (e: ActivityNotFoundException) {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse("http://instagram.com/cityrooter.id")
+                )
+            )
+        }
     }
 
     private fun loadData(){
@@ -58,43 +123,43 @@ class HomeFragment : Fragment() {
 
     private fun observeData() {
         val observerCarousel = Observer<List<String>> { newCarouselImages ->
-            homeFragmentBinding.carouselWidget.setData(newCarouselImages)
+            binding.carouselWidget.setData(newCarouselImages)
         }
         val observerBannerImage = Observer<String> { newBannerImage ->
-            homeFragmentBinding.bannerImageView.load(newBannerImage)
+            binding.bannerImageView.load(newBannerImage)
         }
         val observerMainInfoList = Observer<List<TitleLabelImageModel>> { newMainInfoList ->
-            homeFragmentBinding.basicInfoWidget.setData(newMainInfoList)
+            binding.basicInfoWidget.setData(newMainInfoList)
         }
         val observerSellingPoints = Observer<SellingPointsViewModel> { newSellingPoints ->
-            homeFragmentBinding.sellingPointsWidget.setData(newSellingPoints)
+            binding.sellingPointsWidget.setData(newSellingPoints)
         }
         val observerAdVideo = Observer<String> { newAdVideo ->
 
         }
         val observerAboutUs = Observer<AboutViewModel> { newAboutUs ->
-            homeFragmentBinding.aboutWidget.setData(newAboutUs)
+            binding.aboutWidget.setData(newAboutUs)
         }
         val observerCustSummaries = Observer<CustomerSummaryViewModel> { newCustSummaries ->
-            homeFragmentBinding.custSummaryWidget.setData(newCustSummaries)
+            binding.custSummaryWidget.setData(newCustSummaries)
         }
         val observerSuperiorities = Observer<UnOrderedListViewModel> { newSuperiorities ->
-            homeFragmentBinding.superioritiesWidget.setData(newSuperiorities)
+            binding.superioritiesWidget.setData(newSuperiorities)
         }
         val observerServices = Observer<UnOrderedListViewModel> { newServices ->
-            homeFragmentBinding.servicesWidget.setData(newServices)
+            binding.servicesWidget.setData(newServices)
         }
         val observerGalleries = Observer<GalleryViewModel> { newGalleries ->
-            homeFragmentBinding.galleryWidget.setData(newGalleries)
+            binding.galleryWidget.setData(newGalleries)
         }
         val observerAddress = Observer<String> { address ->
-            homeFragmentBinding.textViewLocation.text = address
+            binding.textViewLocation.text = address
         }
         val observerPhone = Observer<String> { phone ->
-            homeFragmentBinding.textViewPhone.text = phone
+            binding.textViewPhone.text = phone
         }
         val observerEmail = Observer<String> { email ->
-            homeFragmentBinding.textViewEmail.text = email
+            binding.textViewEmail.text = email
         }
 
         viewModel.headerImageList.observe(viewLifecycleOwner, observerCarousel)
@@ -113,6 +178,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun initWidgets(){
-        homeFragmentBinding.carouselWidget.fragment = this
+        binding.carouselWidget.fragment = this
+        setListeners()
     }
 }

@@ -1,19 +1,18 @@
 package com.example.cityrooter.contact
 
-import androidx.lifecycle.ViewModelProvider
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.navigation.navGraphViewModels
-import com.example.cityrooter.R
 import com.example.cityrooter.databinding.ContactFragmentBinding
 import com.example.cityrooter.datamodel.ContactUsResponseModel
-import com.example.cityrooter.datamodel.HomeResponseModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
 
 @AndroidEntryPoint
 class ContactFragment : Fragment() {
@@ -33,6 +32,7 @@ class ContactFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         observeViewModel()
         loadData()
+        setListeners()
     }
 
     private fun observeViewModel(){
@@ -52,6 +52,7 @@ class ContactFragment : Fragment() {
         viewModel.phone.observe(viewLifecycleOwner, observerPhone)
         viewModel.email.observe(viewLifecycleOwner, observerEmail)
     }
+
     private fun loadData(){
         val immutableContext = context
         if(immutableContext != null){
@@ -64,6 +65,29 @@ class ContactFragment : Fragment() {
                 viewModel.setData(
                     data
                 )
+        }
+    }
+
+    private fun setListeners(){
+        binding.sendBtn.setOnClickListener {
+            openGmailIntent()
+        }
+    }
+
+    private fun openGmailIntent(){
+        try {
+            val selectorIntent = Intent(Intent.ACTION_SENDTO)
+            selectorIntent.data = Uri.parse("mailto:")
+
+            val emailIntent = Intent(Intent.ACTION_SEND)
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("marketing@cityrooter.id"))
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Contact City Rooter")
+            emailIntent.putExtra(Intent.EXTRA_TEXT, binding.editTextMessage.text)
+            emailIntent.selector = selectorIntent
+
+            startActivity(Intent.createChooser(emailIntent, "Send email..."))
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 }
