@@ -6,9 +6,9 @@
     <item android:id="@+id/profileFragment"
         android:title="@string/profile_nav_bar_title"
         android:icon="@drawable/ic_compass" />
-    <item android:id="@+id/call"
-        android:title="@string/call_nav_bar_title"
-        android:icon="@drawable/ic_phone" />
+    <item android:id="@+id/clientsFragment"
+        android:title="@string/clients_nav_bar_title"
+        android:icon="@drawable/ic_clients" />
     <item android:id="@+id/contactFragment"
         android:title="@string/contact_nav_bar_title"
         android:icon="@drawable/ic_location"

@@ -27,26 +27,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowCustomEnabled(true);
         supportActionBar?.setCustomView(R.layout.action_bar_layout)
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.blue_primary));
-
-        //AIzaSyA3u8r87_mapy-uxqn3rfZ2bg08zyBtlMs
     }
 
     override fun onStart() {
         super.onStart()
         val navController = findNavController(R.id.navHostContainer)
         activityMainBinding.bottomNavbar.setupWithNavController(navController)
-        setListeners()
-    }
-
-    private fun setListeners(){
-        activityMainBinding.bottomNavbar.menu.get(2).setOnMenuItemClickListener(object :
-            MenuItem.OnMenuItemClickListener {
-            override fun onMenuItemClick(item: MenuItem?): Boolean {
-                val phone = "+628117876900"
-                val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null))
-                startActivity(intent)
-                return true
-            }
-        })
     }
 }

@@ -25,4 +25,8 @@
         android:name="com.example.cityrooter.profile.ProfileFragment"
         android:label="profile_fragment"
         tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/clientsFragment"
+        android:name="com.example.cityrooter.clients.ClientsFragment"
+        android:label="ClientsFragment" />
 </navigation>
