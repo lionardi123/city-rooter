@@ -7,7 +7,7 @@
     tools:context=".home.HomeFragment"
     android:orientation="vertical">
 
-    <com.example.cityrooter.home.widgets.carousel.CarouselWidget
+    <com.id.cityrooter.home.widgets.carousel.CarouselWidget
         android:id="@+id/carouselWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,25 +26,25 @@
         <ImageView
             android:id="@+id/bannerImageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
+            android:layout_height="45dp"
+            android:scaleType="fitXY"
             android:contentDescription="@string/banner"/>
 
     </androidx.cardview.widget.CardView>
 
-    <com.example.cityrooter.home.widgets.basic.BasicInfoWidget
+    <com.id.cityrooter.home.widgets.basic.BasicInfoWidget
         android:id="@+id/basicInfoWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_xl" />
 
-    <com.example.cityrooter.home.widgets.selling_points.SellingPointsWidget
+    <com.id.cityrooter.home.widgets.selling_points.SellingPointsWidget
         android:id="@+id/sellingPointsWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/space_xl"/>
 
-    <com.example.cityrooter.home.widgets.video.VideoPlayerWidget
+    <com.id.cityrooter.home.widgets.video.VideoPlayerWidget
         android:id="@+id/videoPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
         android:layout_marginStart="@dimen/space_l"
         android:layout_marginEnd="@dimen/space_l"/>
 
-    <com.example.cityrooter.home.widgets.about.AboutWidget
+    <com.id.cityrooter.home.widgets.about.AboutWidget
         android:id="@+id/aboutWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,18 +66,18 @@
         android:padding="@dimen/space_ml"
         android:orientation="vertical">
 
-        <com.example.cityrooter.home.widgets.customer.CustomerSummaryWidget
+        <com.id.cityrooter.home.widgets.customer.CustomerSummaryWidget
             android:id="@+id/custSummaryWidget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.example.cityrooter.home.widgets.unordered_list.UnOrderedListWidget
+        <com.id.cityrooter.home.widgets.unordered_list.UnOrderedListWidget
             android:id="@+id/superioritiesWidget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_xl"/>
 
-        <com.example.cityrooter.home.widgets.unordered_list.UnOrderedListWidget
+        <com.id.cityrooter.home.widgets.unordered_list.UnOrderedListWidget
             android:id="@+id/servicesWidget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
 
     </LinearLayout>
 
-    <com.example.cityrooter.home.widgets.gallery.GalleryWidget
+    <com.id.cityrooter.home.widgets.gallery.GalleryWidget
         android:id="@+id/galleryWidget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,4 +1,4 @@
-package com.example.cityrooter
+package com.id.cityrooter
 
 import org.junit.Test
 

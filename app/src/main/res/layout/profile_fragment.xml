@@ -15,9 +15,9 @@
         <ImageView
             android:id="@+id/bannerImageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:padding="@dimen/space_ml"
-            android:scaleType="centerCrop"
+            android:scaleType="center"
             />
 
         <ImageView
